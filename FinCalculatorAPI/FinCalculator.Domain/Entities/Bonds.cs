@@ -13,7 +13,7 @@ namespace FinCalculator.Domain
 
         public int CurrentBalance { get; set; }
         public string CurrentsnPRating { get; set; }
-        public string CurrentFitchRating { get; set; }
+        public int CurrentFitchRating { get; set; }
 
         public string CurrentMoodysRating { get; set; }
         public int DealId { get; set; }
