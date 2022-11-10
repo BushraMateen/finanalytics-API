@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FinCalculator.Domain.Entities
 {
-    public class PortfolioDetails
+    public class PortfolioDetail
     {
         public int PortfolioId { get; set; }
         public string PortfolioName { get; set; }

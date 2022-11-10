@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FinCalculator.Domain.Entities
 {
-    public class Deals
+    public class Deal
     {
         public int DealId { get; set; }
         public string TreppDealName { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FinCalculator.Domain
 {
-    public class Bonds
+    public class Bond
     {
         public int BondId { get; set; }
         public string BondName { get; set; }
