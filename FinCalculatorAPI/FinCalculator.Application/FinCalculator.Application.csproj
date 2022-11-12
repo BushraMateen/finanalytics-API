@@ -9,4 +9,18 @@
     <ProjectReference Include="..\FinCalculator.Domain\FinCalculator.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Porfolioes\Commands\" />
+    <Folder Include="Features\Porfolioes\Queries\GetPortfolioList\" />
+    <Folder Include="Features\Porfolioes\Queries\GetPortfolioDetails\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
 </Project>
