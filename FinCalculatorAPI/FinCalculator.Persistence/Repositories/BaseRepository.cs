@@ -1,4 +1,5 @@
 ﻿using FinCalculator.Application.Contracts.Persistance;
+using FinCalculator.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,9 @@ namespace FinCalculator.Persistence.Repositories
 {
     public class BaseRepository<T> : IAsyncRepository<T> where T : class
     {
-        protected readonly FinCalculatorDbContext _dbContext;
+        protected readonly FinCalculatorContext _dbContext;
 
-        public BaseRepository(FinCalculatorDbContext dbContext)
+        public BaseRepository(FinCalculatorContext dbContext)
         {
             _dbContext = dbContext;
         }

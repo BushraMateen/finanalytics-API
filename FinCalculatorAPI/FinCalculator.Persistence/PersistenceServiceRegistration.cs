@@ -13,7 +13,7 @@ namespace FinCalculator.Persistence
     {
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<FinCalculatorDbContext>(options =>
+            services.AddDbContext<FinCalculatorContext>(options =>
                     options.UseSqlServer(configuration.GetConnectionString("FinCoonectionString")));
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));

@@ -8,7 +8,7 @@ namespace FinCalculator.Persistence.Repositories
 {
     public class PortfolioRepository : BaseRepository<Portfolio>, IPortfolioRepository
     {
-        public PortfolioRepository(FinCalculatorDbContext dbContext) : base(dbContext)
+        public PortfolioRepository(FinCalculatorContext dbContext) : base(dbContext)
         {
         }
     }

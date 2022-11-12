@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Fincalculator.Api.Controllers
 {
-    public class PortfolioController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class PortfolioController : ControllerBase
     {
         private readonly IMediator _mediator;
 
