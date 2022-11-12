@@ -11,7 +11,6 @@ namespace FinCalculator.Domain.Entities
         public string Description { get; set; }
         public string LongDealName { get; set; }
        
-       
         public string TreppDealName { get; set; }
         public string Class { get; set; }
         public string TrancheName { get; set; }
