@@ -9,12 +9,12 @@ namespace FinCalculator.Application.Features.Porfolioes.Commands.CreatePortfolio
     {
         public CreatePortfolioCommandValidator()
         {
-            RuleFor(x => x.Name)
+            RuleFor(x => x.PortfolioName)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
                 .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters");
 
-            RuleFor(x => x.Desc)
+            RuleFor(x => x.Description)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
                 .MaximumLength(200).WithMessage("{PropertyName} must not exceed 50 characters");
