@@ -1,5 +1,6 @@
 ﻿using FinCalculator.Application.Features.Porfolioes.Commands.CreatePortfolio;
 using FinCalculator.Application.Features.Porfolioes.Commands.UpdatePortfolio;
+using FinCalculator.Application.Features.Porfolioes.Commands.DeletePortfolio;
 using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioDetails;
 using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioList;
 using MediatR;
@@ -49,14 +50,14 @@ namespace Fincalculator.Api.Controllers
             return NoContent();
         }
 
-        //[HttpDelete("{id}", Name = "DeletePortfolio")]
-        //public async Task<ActionResult> Delete(int id)
-        //{
-        //    var deletePortfolioCommand = new DeletePortfolioCommand() { PortfolioId = id };
+        [HttpDelete("{id}", Name = "DeletePortfolio")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var deletePortfolioCommand = new DeletePortfolioCommand() { PortfolioId = id };
 
-        //    await _mediator.Send(deletePortfolioCommand);
+            await _mediator.Send(deletePortfolioCommand);
 
-        //    return NoContent();
-        //}
+            return NoContent();
+        }
     }
 }
