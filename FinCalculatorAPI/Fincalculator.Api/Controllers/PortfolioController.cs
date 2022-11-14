@@ -1,4 +1,5 @@
 ﻿using FinCalculator.Application.Features.Porfolioes.Commands.CreatePortfolio;
+using FinCalculator.Application.Features.Porfolioes.Commands.UpdatePortfolio;
 using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioDetails;
 using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioList;
 using MediatR;
@@ -41,12 +42,12 @@ namespace Fincalculator.Api.Controllers
             return Ok(id);
         }
 
-        //[HttpPut(Name = "UpdatePortfolio")]
-        //public async Task<ActionResult> Update([FromBody] UpdatePortfolioCommand updatePortfolioCommand)
-        //{
-        //    await _mediator.Send(updatePortfolioCommand);
-        //    return NoContent();
-        //}
+      [HttpPut(Name = "UpdatePortfolio")]
+        public async Task<ActionResult> Update([FromBody] UpdatePortfolioCommand updatePortfolioCommand)
+        {
+            await _mediator.Send(updatePortfolioCommand);
+            return NoContent();
+        }
 
         //[HttpDelete("{id}", Name = "DeletePortfolio")]
         //public async Task<ActionResult> Delete(int id)

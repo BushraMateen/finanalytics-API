@@ -2,6 +2,7 @@
 using FinCalculator.Application.Features.Porfolioes.Commands.CreatePortfolio;
 using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioDetails;
 using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioList;
+using FinCalculator.Application.Features.Porfolioes.Commands.UpdatePortfolio;
 using FinCalculator.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace FinCalculator.Application.Profiles
             CreateMap<Portfolio, PortfolioDetailVm>().ReverseMap();
            
             CreateMap<Portfolio, CreatePortfolioCommand>().ReverseMap();
-           // CreateMap<Portfolio, UpdatePortfolioCommand>().ReverseMap();
+            CreateMap<Portfolio, UpdatePortfolioCommand>().ReverseMap();
            // CreateMap<Portfolio, DeletePortfolioCommand>().ReverseMap();
 
         }
