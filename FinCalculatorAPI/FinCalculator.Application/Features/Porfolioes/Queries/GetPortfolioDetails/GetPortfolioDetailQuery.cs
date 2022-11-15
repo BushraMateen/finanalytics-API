@@ -8,5 +8,6 @@ namespace FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioDeta
     public class GetPortfolioDetailQuery : IRequest<PortfolioDetailVm>
     {
         public int Id { get; set; }
+
     }
 }

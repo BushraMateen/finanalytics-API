@@ -7,6 +7,7 @@ using FinCalculator.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioInfo;
 
 namespace FinCalculator.Application.Profiles
 {
@@ -19,7 +20,8 @@ namespace FinCalculator.Application.Profiles
            
             CreateMap<Portfolio, CreatePortfolioCommand>().ReverseMap();
             CreateMap<Portfolio, UpdatePortfolioCommand>().ReverseMap();
-           // CreateMap<Portfolio, DeletePortfolioCommand>().ReverseMap();
+            CreateMap<PortfolioDetail, PortfolioInfoVm>().ReverseMap();
+            // CreateMap<Portfolio, DeletePortfolioCommand>().ReverseMap();
 
         }
     }

@@ -35,6 +35,11 @@ namespace FinCalculator.Persistence.Repositories
             return await _dbContext.Set<T>().FindAsync(id);
         }
 
+        public Task GetByIdAsync(object id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IReadOnlyList<T>> ListAllAsync()
         {
             return await _dbContext.Set<T>().ToListAsync();

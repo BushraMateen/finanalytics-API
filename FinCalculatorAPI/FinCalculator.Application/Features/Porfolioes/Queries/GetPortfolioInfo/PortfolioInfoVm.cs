@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-
-namespace FinCalculator.Domain.Entities
+namespace FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioInfo
 {
-    public partial class PortfolioDetail
+    public class PortfolioInfoVm
     {
         public int PortfolioId { get; set; }
         public string PortfolioName { get; set; }

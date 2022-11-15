@@ -5,6 +5,7 @@ using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioDetails;
 using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioInfo;
 
 namespace Fincalculator.Api.Controllers
 {
@@ -25,6 +26,14 @@ namespace Fincalculator.Api.Controllers
             var dtos = await _mediator.Send(new GetPortfolioListQuery());
             return Ok(dtos);
         }
+
+        [HttpGet("info", Name = "GetAllPortfolioInfo")]
+        public async Task<ActionResult<List<PortfolioInfoVm>>> GetAllPortfolioInfo()
+        {
+            var dtos = await _mediator.Send(new GetPortfolioInfoQuery());
+            return Ok(dtos);
+        }
+
 
         [HttpGet("{id}", Name = "GetPortfolioDetails")]
         public async Task<ActionResult<List<PortfolioDetailVm>>> GetPortfolioDetails(int id)

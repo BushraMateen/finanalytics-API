@@ -21,6 +21,8 @@ namespace FinCalculator.Persistence
 
             services.AddScoped<IPortfolioRepository, PortfolioRepository>();
 
+            services.AddScoped<IPortfolioDetailRepository, PortfolioDetailRepository>();
+
 
             return services;
 
