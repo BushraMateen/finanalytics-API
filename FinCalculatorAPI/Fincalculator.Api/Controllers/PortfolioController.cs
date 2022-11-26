@@ -29,9 +29,10 @@ namespace Fincalculator.Api.Controllers
         }
 
         [HttpGet("info", Name = "GetAllPortfolioInfo")]
-        public async Task<ActionResult<List<PortfolioInfoVm>>> GetAllPortfolioInfo()
+        public async Task<ActionResult<List<PortfolioInfoVm>>> GetAllPortfolioInfo(int id)
         {
-            var dtos = await _mediator.Send(new GetPortfolioInfoQuery());
+            var getPortfolioInfoQuery = new GetPortfolioInfoQuery() { Id = id };
+            var dtos = await _mediator.Send(getPortfolioInfoQuery);
             return Ok(dtos);
         }
 

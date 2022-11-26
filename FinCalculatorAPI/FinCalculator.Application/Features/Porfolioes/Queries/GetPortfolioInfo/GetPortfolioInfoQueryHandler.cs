@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
-
+using System.Linq;
 
 namespace FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioInfo
 {
@@ -23,7 +23,10 @@ namespace FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioInfo
         public async Task<List<PortfolioInfoVm>> Handle(GetPortfolioInfoQuery request, CancellationToken cancellationToken)
         {
             var allPortfolioes = await _portfolioDetailRepository.ListAllAsync();
-            return _mapper.Map<List<PortfolioInfoVm>>(allPortfolioes);
+
+            var resultPortfolioInfo = allPortfolioes.Where(x => x.PortfolioId == request.Id).ToList();
+
+            return _mapper.Map<List<PortfolioInfoVm>>(resultPortfolioInfo);
         }
     }
 }

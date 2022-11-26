@@ -8,6 +8,6 @@ namespace FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioInfo
 {
     public class GetPortfolioInfoQuery : IRequest<List<PortfolioInfoVm>>
     {
-      
+        public int Id { get; set; }
     }
 }
