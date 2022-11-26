@@ -6,6 +6,7 @@ using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using FinCalculator.Application.Features.Porfolioes.Queries.GetPortfolioInfo;
+using FinCalculator.Application.Features.Porfolioes.Queries.GetSearchPortfolio;
 
 namespace Fincalculator.Api.Controllers
 {
@@ -68,5 +69,17 @@ namespace Fincalculator.Api.Controllers
 
             return NoContent();
         }
+
+        [HttpGet]
+        public async Task<ActionResult<List<string>>> GetSearchResult(string query)
+        {
+            var getSearchQuery = new GetSearchQuery() { Query = query };
+
+            var dtos = await _mediator.Send(getSearchQuery);
+
+            return (dtos);
+
+        }
     }
+ 
 }
